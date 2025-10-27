@@ -57,7 +57,7 @@ Suggested ABAQUS keywords / settings:
 <friction coefficient>
 *CONTACT CONTROLS
 
-*STEP : Static gENERAL, NLgeom ON, 
+*STEP : Static GENERAL, NLgeom ON, 
 stabilization was used with energy fraction 1E-4
 ```
 
