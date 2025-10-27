@@ -28,18 +28,17 @@ The Ogden model captures large nonlinear elastic deformation typical of silicone
 ```
 *Material, name=Silicone_Ogden
 *Hyperelastic, Ogden, N=3
-mu1, alpha1
-mu2, alpha2
-mu3, alpha3
+Hyperelastic properties
+mu1=0.9
+alpha1=7.5
+D1=0.005
 ```
 
 Add density and damping as required:
 
 ```
-*Density
-rho
-*Viscous Damping
-beta
+*Density of surface is 7800 g/cm^3
+*Density of SPA is 1.049E-09g/cm^3
 ```
 
 ---
@@ -57,7 +56,9 @@ Suggested ABAQUS keywords / settings:
 *SURFACE BEHAVIOR, FRICTION
 <friction coefficient>
 *CONTACT CONTROLS
-stabilization was used
+
+*STEP : Static gENERAL, NLgeom ON, 
+stabilization was used with energy fraction 1E-4
 ```
 
 ---
@@ -74,18 +75,11 @@ A simple periodic pressure function used by `pressure_subroutine.for` could be:
 Where `T` is the pressure period. The subroutine can map this scalar pressure to the chamber faces or internal cavity elements.
 ---
 
-## 🔬 Results (Expected / Example Observations)
+## Results 
 
 * Cyclic elongation and contraction of SPA chambers.
 * Directional locomotion achieved due to asymmetric chamfered tip contact and frictional interactions.
 * Contact force time histories show staggered gripping and release phases between front and rear contact surfaces.
 
-(Place images/GIFs in `results/` after a run and update `README.md` accordingly.)
 
 ---
-
-## 🧭 Future Work
-
-* Parametric study on chamfer angle, friction coefficient, chamber layout, and pressure amplitude/period.
-* Fabrication and exp
-
