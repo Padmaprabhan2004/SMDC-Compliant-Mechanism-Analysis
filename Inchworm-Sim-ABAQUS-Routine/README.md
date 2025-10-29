@@ -76,7 +76,7 @@ Where `T` is the pressure period. The subroutine can map this scalar pressure to
 ---
 
 ## Results 
-
+![Demo](inchworm1.png)
 * Cyclic elongation and contraction of SPA chambers.
 * Directional locomotion achieved due to asymmetric chamfered tip contact and frictional interactions.
 * Contact force time histories show staggered gripping and release phases between front and rear contact surfaces.
